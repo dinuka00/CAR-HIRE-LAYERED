@@ -10,6 +10,9 @@ import lk.ijse.carHire.dao.custom.impl.CategoryDaoImpl;
 import lk.ijse.carHire.dto.CategoryDto;
 import lk.ijse.carHire.entity.CarCategories;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CategoryBoImpl implements CategoryBo {
 
     CategoryDao dao = DaoFactory.getDao(DaoType.CATEGORY);
@@ -54,4 +57,22 @@ public class CategoryBoImpl implements CategoryBo {
         return dao.delete(id);
 
     }
+
+    @Override
+    public List<CategoryDto> getAllCategories() throws Exception {
+
+        List<CarCategories> carCategoriesList = dao.getAll();
+
+        List<CategoryDto> dtoList = new ArrayList<>();
+
+        for(CarCategories carCategory : carCategoriesList){
+            dtoList.add(new CategoryDto(carCategory.getCategoryID(),carCategory.getCategoryName()));
+
+        }
+
+
+        return dtoList;
+    }
+
+
 }

@@ -18,18 +18,7 @@
       </Label>
       <TextField fx:id="txtId" layoutX="84.0" layoutY="84.0" onAction="#txtIdOnAction" prefHeight="25.0" prefWidth="159.0" promptText="Category Id" />
       <TextField fx:id="txtName" layoutX="300.0" layoutY="84.0" prefHeight="25.0" prefWidth="159.0" promptText="Category Name" />
-      <TableView fx:id="tableCategory" layoutX="84.0" layoutY="167.0" prefHeight="200.0" prefWidth="457.0">
-        <columns>
-          <TableColumn fx:id="colId" prefWidth="161.0" text="Category ID" />
-          <TableColumn fx:id="colName" prefWidth="295.0" text="Category Name" />
-        </columns>
-      </TableView>
       <Button layoutX="84.0" layoutY="122.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #00a8ff;" text="Save">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <Button layoutX="364.0" layoutY="122.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #4cd137;" text="Clear">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -39,10 +28,21 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <Button layoutX="364.0" layoutY="122.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #4cd137;" text="Clear">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
       <Button layoutX="266.0" layoutY="122.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #EE5A24;" text="Delete">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <TableView fx:id="tableCategory" layoutX="84.0" layoutY="167.0" onMouseClicked="#btnOnMouseCllicked" prefHeight="200.0" prefWidth="457.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="161.0" text="Category ID" />
+          <TableColumn fx:id="colName" prefWidth="295.0" text="Category Name" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

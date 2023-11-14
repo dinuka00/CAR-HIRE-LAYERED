@@ -8,6 +8,7 @@ import lk.ijse.carHire.entity.CarCategories;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryDaoImpl implements CategoryDao {
@@ -88,6 +89,24 @@ public class CategoryDaoImpl implements CategoryDao {
 
     @Override
     public List<CarCategories> getAll() throws Exception {
-        return null;
+
+        List<CarCategories> carCategories = new ArrayList<>();
+
+        Connection con = DBConnection.getInstance().getConnection();
+
+        String sql = "SELECT * FROM carcategories";
+
+        PreparedStatement pstm = con.prepareStatement(sql);
+
+        ResultSet resultSet = pstm.executeQuery();
+
+        while (resultSet.next()){
+            carCategories.add(new CarCategories(
+                    resultSet.getString(1),
+                    resultSet.getString(2)
+            ));
+        }
+
+        return carCategories;
     }
 }
