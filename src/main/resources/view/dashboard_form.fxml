@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="rootNode" prefHeight="470.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carHire.controller.dashboardController">
    <children>
       <Label layoutX="294.0" layoutY="43.0" prefHeight="33.0" prefWidth="117.0" text="Car Hire" textFill="#2c2c54">
@@ -19,7 +18,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="420.0" layoutY="114.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="117.0" style="-fx-background-color: #f53b57;" text="Cars">
+      <Button layoutX="420.0" layoutY="114.0" mnemonicParsing="false" onAction="#btnOnAction" prefHeight="46.0" prefWidth="117.0" style="-fx-background-color: #f53b57;" text="Cars">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

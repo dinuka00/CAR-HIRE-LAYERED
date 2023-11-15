@@ -23,4 +23,15 @@ public class dashboardController {
         primaryStage.setTitle("Category Manage");
 
     }
+
+    public void btnOnAction(ActionEvent actionEvent) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/car_form.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage primaryStage = (Stage) this.rootNode.getScene().getWindow();
+
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Car Manage");
+    }
 }

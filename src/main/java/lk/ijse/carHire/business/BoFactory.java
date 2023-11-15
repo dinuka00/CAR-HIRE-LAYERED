@@ -1,5 +1,6 @@
 package lk.ijse.carHire.business;
 
+import lk.ijse.carHire.business.custom.impl.CarBoImpl;
 import lk.ijse.carHire.business.custom.impl.CategoryBoImpl;
 
 public class BoFactory {
@@ -8,6 +9,9 @@ public class BoFactory {
         switch (type){
             case CATEGORY :
                 return (T) new CategoryBoImpl();
+
+            case  CAR :
+                    return (T) new CarBoImpl();
             default:
                 return null;
         }

@@ -1,5 +1,5 @@
 package lk.ijse.carHire.dao;
 
 public enum DaoType {
-    CATEGORY
+    CATEGORY, CAR
 }

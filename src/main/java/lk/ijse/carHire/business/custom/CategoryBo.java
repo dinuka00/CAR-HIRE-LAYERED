@@ -1,5 +1,6 @@
 package lk.ijse.carHire.business.custom;
 
+import lk.ijse.carHire.dto.CarDto;
 import lk.ijse.carHire.dto.CategoryDto;
 
 import java.util.List;
