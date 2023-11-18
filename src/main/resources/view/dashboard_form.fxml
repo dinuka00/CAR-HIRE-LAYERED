@@ -23,7 +23,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="236.0" layoutY="114.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="117.0" style="-fx-background-color: #0fbcf9;" text="Customers">
+      <Button layoutX="236.0" layoutY="114.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="46.0" prefWidth="117.0" style="-fx-background-color: #0fbcf9;" text="Customers">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
