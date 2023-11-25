@@ -4,4 +4,5 @@ import lk.ijse.carHire.dao.CrudDao;
 import lk.ijse.carHire.entity.CarEntity;
 
 public interface CarDao extends CrudDao <CarEntity, String>{
+    boolean updateAvailability(CarEntity carEntity);
 }

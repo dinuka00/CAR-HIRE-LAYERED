@@ -1,9 +1,7 @@
 package lk.ijse.carHire.dao;
 
 import lk.ijse.carHire.dao.custom.CustomerDao;
-import lk.ijse.carHire.dao.custom.impl.CarDaoImpl;
-import lk.ijse.carHire.dao.custom.impl.CategoryDaoImpl;
-import lk.ijse.carHire.dao.custom.impl.CustomerDaoImpl;
+import lk.ijse.carHire.dao.custom.impl.*;
 
 public class DaoFactory {
     public static  <T>T getDao(DaoType type){
@@ -16,7 +14,10 @@ public class DaoFactory {
 
             case  CUSTOMER:
                 return  (T) new CustomerDaoImpl();
-
+            case  RENT:
+                return  (T) new RentDaoImpl();
+            case  RETURN:
+                return  (T) new ReturnDaoImpl();
             default :
                 return  null;
         }

@@ -131,5 +131,12 @@ public class CarDaoImpl implements CarDao {
             ));
         }
         return carEntityList;
+
+
+    }
+
+    @Override
+    public boolean updateAvailability(CarEntity carEntity) {
+        return false;
     }
 }

@@ -4,12 +4,17 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import lk.ijse.carHire.business.BoFactory;
 import lk.ijse.carHire.business.BoType;
 import lk.ijse.carHire.business.custom.CategoryBo;
@@ -18,11 +23,13 @@ import lk.ijse.carHire.db.DBConnection;
 import lk.ijse.carHire.dto.CategoryDto;
 import lk.ijse.carHire.dto.tm.CategoryTm;
 
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryFormController {
+    public AnchorPane rootNode;
     @FXML
     private TextField txtId;
     @FXML
@@ -188,5 +195,16 @@ public class CategoryFormController {
             throw new RuntimeException(e);
         }
 
+    }
+
+    public void btnBackOnAction(ActionEvent actionEvent) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/dashboard_form.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage primaryStage = (Stage) this.rootNode.getScene().getWindow();
+
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Dashboard");
     }
 }

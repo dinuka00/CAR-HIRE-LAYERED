@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="563.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carHire.controller.CustomerFormController">
+<AnchorPane fx:id="rootNode" prefHeight="563.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carHire.controller.CustomerFormController">
    <children>
       <Label layoutX="258.0" layoutY="31.0" text="Customer Manage" textFill="#1e3799">
          <font>
@@ -58,5 +58,10 @@
       <TextField fx:id="txtProvince" layoutX="313.0" layoutY="204.0" prefHeight="25.0" prefWidth="118.0" promptText="Province" />
       <TextField fx:id="txtZip" layoutX="474.0" layoutY="204.0" prefHeight="25.0" prefWidth="118.0" promptText="Postal Code" />
       <DatePicker fx:id="dpDob" layoutX="87.0" layoutY="163.0" prefHeight="25.0" prefWidth="159.0" promptText="Date of Birth" />
+      <Button layoutX="28.0" layoutY="35.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="25.0" prefWidth="54.0" style="-fx-background-color: #747d8c;" text="Back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

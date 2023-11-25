@@ -1,8 +1,7 @@
 package lk.ijse.carHire.business;
 
-import lk.ijse.carHire.business.custom.impl.CarBoImpl;
-import lk.ijse.carHire.business.custom.impl.CategoryBoImpl;
-import lk.ijse.carHire.business.custom.impl.CustomerBoImpl;
+import lk.ijse.carHire.business.custom.impl.*;
+import lk.ijse.carHire.dao.custom.impl.CustomerDaoImpl;
 
 public class BoFactory {
     public static <T>T getBo(BoType type){
@@ -16,7 +15,10 @@ public class BoFactory {
 
             case  CUSTOMER :
                 return (T) new CustomerBoImpl();
-
+            case RENT:
+                return  (T) new RentBoImpl();
+            case RETURN:
+                return  (T) new ReturnBoImpl();
             default:
                 return null;
         }

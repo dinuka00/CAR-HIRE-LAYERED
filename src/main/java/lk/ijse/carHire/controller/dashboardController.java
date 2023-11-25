@@ -45,4 +45,26 @@ public class dashboardController {
         primaryStage.setScene(scene);
         primaryStage.setTitle("Customer Manage");
     }
+
+    public void btnRentOnAction(ActionEvent actionEvent) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/rent_form.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage primaryStage = (Stage) this.rootNode.getScene().getWindow();
+
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("New Rent");
+    }
+
+    public void btnReturnOnAction(ActionEvent actionEvent) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/return_form.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage primaryStage = (Stage) this.rootNode.getScene().getWindow();
+
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Return Car");
+    }
 }
